@@ -10,7 +10,7 @@ function Navbar() {
 const [nav, setNav] = useState(false);
 const handleClick = () => setNav(!nav);
 
-const {isAuthenticated} = useAuth()
+const {isAuthenticated, user} = useAuth()
 
   return (
    <div>
@@ -22,9 +22,11 @@ const {isAuthenticated} = useAuth()
         <Link to='/Videojuegos'><li>Videojuegos</li></Link>
         <Link to='/Peliculas'><li>Series y Peliculas</li></Link>
         <Link to='/Musicas'><li>Musica</li></Link>
+        <Link to='/Comida'><li className='hover:text-teal-700'>Comida</li></Link>
         <Link to='/Detalles'><li>Detalles personales</li></Link>
         <Link to='/MiniJuegos'><li>Minijuegos</li></Link>
-        <Link to='/profile'><li>perfil</li></Link>
+        <Link to='/Comida'><li>Comida</li></Link>
+        <Link to='/profile'><li>{user.username}</li></Link>
 
       </ul>
       {/* Hamburger or Close Icon */}
@@ -44,9 +46,10 @@ const {isAuthenticated} = useAuth()
         <Link to='/Videojuegos'><li className='hover:text-teal-700'>Videojuegos</li></Link>
         <Link to='/Peliculas'><li className='hover:text-teal-700'>Series y Peliculas</li></Link>
         <Link to='/Musicas'><li className='hover:text-teal-700'>Musica</li></Link>
+        <Link to='/Comida'><li className='hover:text-teal-700'>Comida</li></Link>
         <Link to='/Detalles'><li className='hover:text-teal-700'>Detalles personales</li></Link>
         <Link to='/MiniJuegos'><li className='hover:text-teal-700'>Minijuegos</li></Link>
-        <Link to='/profile'><li className='hover:text-teal-700'>perfil</li></Link>
+        <Link to='/profile'><li className='hover:text-teal-700'>{user.username}</li></Link>
       </ul>
     </nav>
     ):(
@@ -60,8 +63,9 @@ const {isAuthenticated} = useAuth()
         <Link to='/Musicas'><li>Musica</li></Link>
         <Link to='/Detalles'><li>Detalles personales</li></Link>
         <Link to='/MiniJuegos'><li>Minijuegos</li></Link>
-        <Link to='/login'><li>Login</li></Link>                <Link to='/login'><li>Login</li></Link>
-        <Link to='/register'><li>Register</li></Link>
+        <Link to='/Comida'><li>Comida</li></Link>
+        <Link to='/login'><li>Login</li></Link>
+         <Link to='/register'><li>Register</li></Link>               
       </ul>
       {/* Hamburger or Close Icon */}
       <div className=' md:hidden z-10' onClick={handleClick}>

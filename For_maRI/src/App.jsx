@@ -7,7 +7,7 @@ import { AuthProvider } from "./context/AuthContext";
 function App() {
 
   return (
-    <div>
+    <div className="w-screen h-screen">
       <AuthProvider>
       <BrowserRouter>
        <Navbar/>  

@@ -13,6 +13,7 @@ import Add_tasks from '../components/Add_tasks'
 import Profile from '../components/Profile'
 import Protector_rutas from './Protector_rutas'
 import { useAuth } from '../context/AuthContext'
+import Comida from '../Pages/Comida'
 
 
 function Rutas() {
@@ -27,6 +28,7 @@ function Rutas() {
         <Route path="/Peliculas" element={<Movies/>}/>,
         <Route path="/Musicas" element={<Musica/>}/>,
         <Route path="/Galeria" element={<Photos/>}/>,
+        <Route path="/Comida" element={<Comida/>}/>,
         <Route path="/login" element={<Login/>}/>,
         <Route path="/register" element={<Register/>}/>,
 
