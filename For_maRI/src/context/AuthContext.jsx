@@ -33,22 +33,22 @@ export const AuthProvider = ({children}) => {
        }
     };
 
-    const signin = async (user) => {
-      
-      try {
-        
-        const res = await loginRequest(user)
-        setIsAuthenticated(true)
-        console.log(res)
-
-      }catch (error) {
-        if(Array.isArray(error.response.data)){
-          return setErrors(error.response.data)
-        }
-        setErrors([error.response.data.message])
-        
-      }
+const signin = async (user) => {
+  try {
+    const res = await loginRequest(user);
+    setIsAuthenticated(true);
+    console.log(res);
+    return true; // ✅ devuelve éxito
+  } catch (error) {
+    if (Array.isArray(error.response.data)) {
+      setErrors(error.response.data);
+    } else {
+      setErrors([error.response.data.message]);
     }
+    return false; // ❌ devuelve fallo
+  }
+};
+
 
 
   useEffect(() => {
