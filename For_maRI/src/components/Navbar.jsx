@@ -23,9 +23,9 @@ const {isAuthenticated, user} = useAuth()
         <Link to='/Peliculas'><li>Series y Peliculas</li></Link>
         <Link to='/Musicas'><li>Musica</li></Link>
         <Link to='/Comida'><li className='hover:text-teal-700'>Comida</li></Link>
-        <Link to='/Detalles'><li>Detalles personales</li></Link>
         <Link to='/MiniJuegos'><li>Minijuegos</li></Link>
         <Link to='/Comida'><li>Comida</li></Link>
+        <Link to='/Galeria'><li>Galeria</li></Link>
         <Link to='/profile'><li>{user.username}</li></Link>
 
       </ul>
@@ -47,7 +47,7 @@ const {isAuthenticated, user} = useAuth()
         <Link to='/Peliculas'><li className='hover:text-teal-700'>Series y Peliculas</li></Link>
         <Link to='/Musicas'><li className='hover:text-teal-700'>Musica</li></Link>
         <Link to='/Comida'><li className='hover:text-teal-700'>Comida</li></Link>
-        <Link to='/Detalles'><li className='hover:text-teal-700'>Detalles personales</li></Link>
+         <Link to='/Galeria'><li className='hover:text-teal-700'>Galeria</li></Link>
         <Link to='/MiniJuegos'><li className='hover:text-teal-700'>Minijuegos</li></Link>
         <Link to='/profile'><li className='hover:text-teal-700'>{user.username}</li></Link>
       </ul>
@@ -61,7 +61,7 @@ const {isAuthenticated, user} = useAuth()
         <Link to='/Videojuegos'><li>Videojuegos</li></Link>
         <Link to='/Peliculas'><li>Series y Peliculas</li></Link>
         <Link to='/Musicas'><li>Musica</li></Link>
-        <Link to='/Detalles'><li>Detalles personales</li></Link>
+        <Link to='/Galeria'><li>Galeria</li></Link>
         <Link to='/MiniJuegos'><li>Minijuegos</li></Link>
         <Link to='/Comida'><li>Comida</li></Link>
         <Link to='/login'><li>Login</li></Link>
@@ -84,8 +84,8 @@ const {isAuthenticated, user} = useAuth()
         <Link to='/Videojuegos'><li className='hover:text-teal-700'>Videojuegos</li></Link>
         <Link to='/Peliculas'><li className='hover:text-teal-700'>Series y Peliculas</li></Link>
         <Link to='/Musicas'><li className='hover:text-teal-700'>Musica</li></Link>
-        <Link to='/Detalles'><li className='hover:text-teal-700'>Detalles personales</li></Link>
         <Link to='/MiniJuegos'><li className='hover:text-teal-700'>Minijuegos</li></Link>
+        <Link to='/Comida'><li className='hover:text-teal-700'>Comida</li></Link>
         <Link to='/login'><li className='hover:text-teal-700'>Login</li></Link>
         <Link to='/register'><li className='hover:text-teal-700'>Register</li></Link>
         

@@ -8,12 +8,13 @@ import { useNavigate } from 'react-router-dom';
 function Login() {
   const {register, handleSubmit, formState:{errors}} = useForm()
   const {signin, isAuthenticated ,errors: signinErrors} = useAuth()
-  const Onsumit = handleSubmit((data) =>{ signin(data)})
+
+  const Onsumit = async (data) => { await signin(data)}
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(isAuthenticated) navigate("/")
-    } , [isAuthenticated])
+        if(isAuthenticated) navigate("/");
+    },[isAuthenticated])
 
   return (
     <div className="h-[calc(100vh-100px)] flex items-center bg-zinc-900 justify-center">

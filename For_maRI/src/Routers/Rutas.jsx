@@ -14,6 +14,9 @@ import Profile from '../components/Profile'
 import Protector_rutas from './Protector_rutas'
 import { useAuth } from '../context/AuthContext'
 import Comida from '../Pages/Comida'
+import SI_NO from '../Juegos/SI_NO'
+import Regalo from '../Juegos/Regalo'
+import Rompecabezas from '../Juegos/Rompecabezas'
 
 
 function Rutas() {
@@ -24,16 +27,18 @@ function Rutas() {
     <div>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/Videojuegos" element={<Games/>}/>,
-        <Route path="/Peliculas" element={<Movies/>}/>,
-        <Route path="/Musicas" element={<Musica/>}/>,
-        <Route path="/Galeria" element={<Photos/>}/>,
-        <Route path="/Comida" element={<Comida/>}/>,
         <Route path="/login" element={<Login/>}/>,
         <Route path="/register" element={<Register/>}/>,
-
+        <Route path="/SI_NO" element={<SI_NO/>}/>,
+        <Route path="/Regalo" element={<Regalo/>}/>,
+        <Route path="/Rompecabezas" element={<Rompecabezas/>}/>,
 
         <Route element={<Protector_rutas/>}/>
+        <Route path="/Videojuegos" element={isAuthenticated ? <Games/>: <Navigate to='/login' />}/>,
+        <Route path="/Peliculas" element={isAuthenticated ? <Movies/>: <Navigate to='/login' />}/>,
+        <Route path="/Musicas" element={isAuthenticated ? <Musica/>: <Navigate to='/login' />}/>,
+        <Route path="/Galeria" element={isAuthenticated ? <Photos/>: <Navigate to='/login' />}/>,
+        <Route path="/Comida" element={isAuthenticated ? <Comida/>: <Navigate to='/login' />}/>,
         <Route path="/Detalles" element={isAuthenticated ? <Detalles/> : <Navigate to='/login' />}/>,
         <Route path="/MiniJuegos" element={isAuthenticated ? <Minegame/> : <Navigate to='/login'/>}/>,  
 

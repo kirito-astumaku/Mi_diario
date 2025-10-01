@@ -6,7 +6,7 @@ function Home() {
       <div>
         <div className="mt-8 border rounded-md p-2 bg-linear-to-r/srgb from-indigo-500 to-teal-400">
           <h1 >Videojuegos</h1>
-          <p>en esta parte estan los juegos que nos gustan a los dos y algunos datos de cada uno de ellos </p>
+          <p>en esta parte estan los juegos que nos gustan a los dos</p>
         </div>
 
 
@@ -28,15 +28,12 @@ function Home() {
         </div>
 
 
-        <div className="mt-8 border rounded-md p-2 bg-linear-to-r/srgb from-indigo-500 to-teal-400">
-          <h1 >Detalles</h1>
-          <p>aqui hay mas detalles de nosotrso como cuando nacimos o algunos datos de los dos </p>
-        </div>
+
 
 
         <div className="mt-8 border rounded-md p-2 bg-linear-to-r/srgb from-indigo-500 to-teal-400">
           <h1 >mini juegos</h1>
-          <p>aqui hay algunos juegos que tenia planeado hacerte a ti mari que no te havia echo</p>
+          <p>aqui hay algunos juegos que tenia planeado hacerte a ti mari que no te avía echo</p>
         </div>
 
 
