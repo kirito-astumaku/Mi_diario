@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "cd server && npm start",
-    "build": "cd client && npm run build"
+    "start": "cd Server && npm start",
+    "build": "cd For_maRI && npm run build"
   }
 }
